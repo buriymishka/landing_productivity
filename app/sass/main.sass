@@ -51,5 +51,195 @@ ul
 	padding: 0
 	list-style-type: none
 
+a
+	color: $text
+	text-decoration: none
+
+.wrapper
+	+wrapper()
+
+.button
+	color: $accent
+	background-color: #D2E1FF
+	border-radius: 2px
+	padding: 13px 30px
+	font-size: 13px
+	font-family: "quicksand"
+	font-weight: bold
+	cursor: pointer
+	transition: background-color .25s ease
+	&:hover
+		background-color: darken(#D2E1FF, 5%)
+
+.strong
+	font-weight: bold
+
+p
+	margin: 0
+
+.header
+	&__wrapper-top
+		display: flex
+		align-items: center
+		+lg-block()
+			justify-content: space-between
+			padding-top: 20px
+			padding-bottom: 20px
+	&__logo
+		width: 26px
+		height: 26px
+		flex-shrink: 0
+	&__navigation-list
+		margin-left: 60px
+		display: flex
+		+lg(display, none)
+	&__navigation-item
+		display: inline-block
+		font-family: "quicksand"
+		font-size: 14px
+		font-weight: bold
+		& > a
+			line-height: 80px
+			padding: 0 22px
+			display: block
+			transition: color .25s ease
+			&:hover
+				color: $accent
+	&__social
+		margin: 0 60px 0 auto
+		display: flex
+		+lg(display, none)
+		&-img
+			margin: 0 15px
+			path
+				transition: fill .25s ease
+			&:hover				
+				path
+					fill: $accent
+	&__wrapper-bottom
+		height: 600px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		text-align: center
+	&__sub-title
+		font-size: 10px
+		font-weight: bold
+		color: $accent
+		text-transform: uppercase
+		padding-top: 92px
+	&__title
+		font-size: 48px
+		font-family: "quicksand"
+		font-weight: 400
+		color: $accent
+		margin-bottom: 30px
+	&__description
+		font-size: 15px
+		max-width: 40%
+		margin: auto
+
+
+
+
+
+.menu-btn
+	width: 40px
+	height: 50px
+	background-color: transparent
+	top: 0
+	right: 0
+	z-index: 6
+	transition: left .25s ease
+	padding: 0 5px
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	top: 18px
+	+xs(left, 40%)
+	&.active
+		left: 90%
+		position: fixed
+.toggle-mnu 
+	display: none
+	align-items: center
+	justify-content: center
+	border-radius: 5px
+	+lg(display, flex)
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+		width: 100%
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		top: -8px
+		display: block
+
+	span, span:after, span:before
+		width: 70%
+		height: 2px
+		background-color: #000000
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+	
+	span:after, span:before
+		width: 100%
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)			
+
+.menu-mobile
+	position: absolute
+	height: 100vh
+	width: 100%
+	z-index: 5
+	overflow-x: scroll
+	background-color: #ffffff
+	transform: translateY(-100%)
+	transition: transform .25s ease
+	display: none
+	+lg(display, block)
+	&.active
+		transform: translateY(0)
+		position: fixed
+
+	&__navigation
+		min-height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+	.header__navigation
+		text-align: center
+		&-list
+			display: block
+			display: flex
+			flex-direction: column
+			justify-content: center
+			border: none
+			margin: 0
+		&-item
+			display: block
+			flex-grow: 0
+			text-align: center
+	.header__social
+		display: block
+		text-align: center
+		margin: 20px 0
+
+
 
 @import "media" // Always at the end

@@ -58,6 +58,17 @@ a
 .wrapper
 	+wrapper()
 
+.title
+	font-size: 36px
+	font-weight: bold
+	font-family: "quicksand"
+	color: $accent
+
+.sub-title
+	font-size: 12px
+	text-transform: uppercase
+	color: $accent
+
 .button
 	color: $accent
 	background-color: #D2E1FF
@@ -70,12 +81,27 @@ a
 	transition: background-color .25s ease
 	&:hover
 		background-color: darken(#D2E1FF, 5%)
-
+	&-f
+		background-color: $accent
+		color: #ffffff
+		&:hover
+			background-color: darken($accent, 5%)
+	&-t
+		background-color: transparent
+		border: 1px solid #D1D1E4
+		color: $text
+		transition: color .25s ease
+		&:hover
+			color: $accent
+			background-color: transparent
 .strong
 	font-weight: bold
 
 p
 	margin: 0
+
+.text
+	line-height: 29px
 
 .header
 	&__wrapper-top
@@ -136,7 +162,10 @@ p
 		margin-bottom: 30px
 	&__description
 		font-size: 15px
-		max-width: 40%
+		max-width: 25%
+		+md(max-width, 50%)
+		+sm(max-width, 75%)
+		+xs(max-width, 90%)
 		margin: auto
 
 
@@ -240,6 +269,42 @@ p
 		text-align: center
 		margin: 20px 0
 
+.first-section
+	&__wrapper
+		+row-flex()
+		justify-content: center
+	&__item
+		padding: 50px
+		text-align: center
+		+col()
+		+size(2.4)
+		+size-lg(6)
+		+size-xs(12)
+		path
+			transition: fill 0.25s ease
+		&:hover
+			path
+				fill: $accent
 
+.second-section
+	background-color: #F5F8FF
+	padding: 200px 0
+	+sm(padding, 100px 0)
+	&__wrapper
+		+row-flex()
+	&__text
+		+col()
+		+size(6)
+		+size-sm(12)
+	&__picture
+		+col()
+		+size(6)
+		+size-sm(12)
+		+sm(margin-top, 70px)
+	&__title
+		margin: 25px 0
+		+xs(font-size, 32px)
+	&__description
+		margin-bottom: 50px
 
 @import "media" // Always at the end

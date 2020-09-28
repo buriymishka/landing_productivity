@@ -29,5 +29,9 @@
 		"gulp-util": "^3.0.8",
 		"imagemin-webp": "^6.0.0",
 		"smart-grid": "^2.1.2"
+	},
+	"dependencies": {
+		"@glidejs/glide": "^3.4.1",
+		"swiper": "^6.3.2"
 	}
 }

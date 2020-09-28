@@ -33,4 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let headerTitle = document.querySelector('.header__title');
   headerTitle.innerHTML = headerTitle.innerHTML.replace(/productivity/, '<span class="strong">productivity</span>');
 
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
+  });
+
 });

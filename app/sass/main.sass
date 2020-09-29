@@ -81,6 +81,7 @@ a
 	font-weight: bold
 	cursor: pointer
 	transition: background-color .25s ease
+	text-align: center
 	&:hover
 		background-color: darken(#D2E1FF, 5%)
 	&-f
@@ -431,4 +432,96 @@ p
 	right: 0
 .swiper-button-prev
 	left: 0
+
+.sixth-section
+	padding: 100px 0
+	background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%)
+	&__wrapper
+		+row-flex()
+	&__text
+		+col()
+		+size(6)
+		+size-md(12)
+		text-align-last: left
+	&__title
+		margin: 30px 0 15px
+	&__description
+		max-width: 50%
+		+xs(max-width, 90%)
+	&__slider
+		+col()
+		+size(6)
+		+size-md(12)
+	.slider
+		position: relative
+		+md(margin-top, 50px)
+		.swiper-container1
+			overflow-x: hidden
+			overflow-y: visible
+		.swiper-pagination
+			bottom: -20px
+		&__item
+			color: #676F95
+		&__text
+			padding: 50px 70px
+			border: 1px solid #D8E3FE
+			background-color: #ffffff
+		&__img
+			position: relative
+			bottom: 0
+			left: 50%
+			transform: translate(-50%, -50%)
+
+.seventh-section
+	text-align: center
+	padding: 100px 0
+	.questions
+		text-align-last: left
+		&__item
+			border-bottom: 1px solid #000
+			position: relative
+		&__ask
+			display: flex
+			align-items: center
+			cursor: pointer
+			position: relative
+			z-index: 5
+			background-color: #ffffff
+			&-img
+				padding: 24px
+				transition: all .25s ease
+				transform: rotate(-180deg)
+			&-text
+				font-size: 18px
+				font-family: "quicksand"
+				font-weight: bold
+				transition: all .25s ease
+				
+			&.active
+				
+				.questions__ask-img
+					transform: rotate(0deg)
+					path
+						stroke: $accent
+				.questions__ask-text
+					color: $accent
+		&__answer
+			overflow: hidden
+			height: 0
+			transition: all .25s ease
+			&-wrapper
+				padding: 20px 50px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				flex-wrap: wrap
+			&-text
+				max-width: 40%
+				text-align: left
+				+xs(max-width, 100%)
+			&-button
+				+xs(font-size, 12px)
+				
+
+
 @import "media" // Always at the end

@@ -19,7 +19,6 @@ body
 	overflow-x: hidden
 	color: $text
 	input, textarea
-		border: #666 1px solid
 		outline: none
 		&:focus:required:invalid
 			border-color: red
@@ -55,6 +54,13 @@ ul
 a
 	color: $text
 	text-decoration: none
+
+input
+	border: none
+	outline: none
+
+button
+	border: none
 
 .wrapper
 	+wrapper()
@@ -522,6 +528,121 @@ p
 			&-button
 				+xs(font-size, 12px)
 				
+.eighth-section
+	padding: 100px 0
+	text-align: center
+	background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%)
+	color: #ffffff
+	position: relative
+	overflow: hidden
+	&__clouds
+		position: absolute
+		z-index: 1
+		&-1
+			left: 10%
+			top: 10%
+		&-2
+			bottom: 10%
+			right: 10%
+	&__wrapper
+		position: relative
+		z-index: 2
+	&__sub-title
+		color: #ffffff
+	&__title
+		color: #ffffff
+		margin: 16px 0 28px
+	&__description
+		max-width: 40%
+		+md(max-width, 70%)
+		+sm(max-width, 90%)
+		margin: 0 auto 60px
+	&__buttons
+		.button-f
+			background-color: #ffffff
+			color: $accent
+		.button-t
+			color: #C7D3FF
+		.button
+			transition: transform .25s ease
+			margin: 5px 0
+			&:hover
+				transform: scale(1.1)
 
+.ninth-section
+	padding: 100px 0
+	&__wrapper
+		+row-flex()
+	&__text
+		+col()
+		+size(6)
+		+size-md(12)
+	&__form
+		+col()
+		+size(6)
+		+size-md(12)
+	&__title
+		color: $accent
+	&__description
+		max-width: 50%
+	.form
+		display: flex
+		align-items: center
+		+xs(flex-wrap, wrap)
+		height: 100%
+		+md(margin-top, 30px)
+		&__input
+			width: 280px
+			height: 60px
+			background-color: #EFEFF7
+			border-radius: 5px
+			padding: 0 20px
+			+xs(display, block)
+		&__button
+			background-color: #4D6CE1
+			color: #ffffff
+			width: 184px
+			height: 60px
+
+.footer
+	padding-bottom: 40px
+	&__wrapper-top
+		display: flex
+		align-items: center
+		+lg-block()
+			justify-content: space-between
+			padding-top: 20px
+			padding-bottom: 20px
+	&__logo
+		width: 26px
+		height: 26px
+		flex-shrink: 0
+	&__navigation-list
+		margin-left: 60px
+		display: flex
+		+lg(display, none)
+	&__navigation-item
+		display: inline-block
+		font-family: "quicksand"
+		font-size: 14px
+		font-weight: bold
+		& > a
+			line-height: 80px
+			padding: 0 22px
+			display: block
+			transition: color .25s ease
+			&:hover
+				color: $accent
+	&__social
+		margin: 0 60px 0 auto
+		display: flex
+		+lg(display, none)
+		&-img
+			margin: 0 15px
+			path
+				transition: fill .25s ease
+			&:hover				
+				path
+					fill: $accent
 
 @import "media" // Always at the end

@@ -33,29 +33,29 @@ document.addEventListener("DOMContentLoaded", () => {
   let headerTitle = document.querySelector('.header__title');
   headerTitle.innerHTML = headerTitle.innerHTML.replace(/productivity/, '<span class="strong">productivity</span>');
 
-  // const swiper = new Swiper('.swiper-container', {
-  //   loop: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     clickable: true,
-  //   },
-  //   autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: true,
-  //   },
-  // });
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
+  });
 
-  // const swiper = new Swiper('.swiper-container1', {
-  //   loop: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     clickable: true,
-  //   },
-  //   autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: true,
-  //   },
-  // });
+  const swiper1 = new Swiper('.swiper-container1', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
+  });
 
 
   let setAccordion = () => {
